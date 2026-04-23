@@ -1,0 +1,184 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0e6;
+    color: #3e2723;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background-color: #fffaf3;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3e2723;
+}
+
+.logo span {
+    font-size: 22px;
+}
+
+.logo h2 {
+    font-size: 22px;
+}
+
+/* ===== NAV ===== */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6d4c41;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #3e2723;
+}
+
+/* ===== CAFE PAGE ===== */
+.cafe-page {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* ===== HERO ===== */
+.cafe-hero {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.cafe-hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ===== INFO ===== */
+.cafe-info {
+    background-color: #fffaf3;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.cafe-info h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #3e2723;
+}
+
+.meta {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: #6d4c41;
+    font-size: 14px;
+}
+
+.desc {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ===== REVIEWS ===== */
+.reviews {
+    margin-top: 10px;
+}
+
+.reviews h2 {
+    margin-bottom: 15px;
+    color: #3e2723;
+}
+
+.review {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.review h4 {
+    margin-bottom: 8px;
+    color: #3e2723;
+}
+
+.review p {
+    color: #555;
+}
+
+/* ===== ADD REVIEW ===== */
+.add-review {
+    background-color: #fffaf3;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    margin-top: 25px;
+}
+
+.add-review h2 {
+    margin-bottom: 15px;
+    color: #3e2723;
+}
+
+.add-review input,
+.add-review select,
+.add-review textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.add-review textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.add-review button {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-review button:hover {
+    background-color: #3e2723;
+}
