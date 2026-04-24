@@ -348,3 +348,22 @@ body {
     background-color: #6f4e37;
     color: white;
 }
+.login-btn {
+    display: inline-block;
+    padding: 12px 28px;
+
+    background-color: #7b5a3c;   /* brown */
+    color: white;
+
+    text-decoration: none;
+    border-radius: 10px;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #5a3d2b;   /* darker brown */
+}
