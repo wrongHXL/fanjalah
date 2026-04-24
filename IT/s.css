@@ -324,3 +324,27 @@ body {
         gap: 10px;
     }
 }
+.see-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #6f4e37;              /* brown text */
+    border: 2px solid #6f4e37;  /* brown border */
+    border-radius: 30px;        /* rounded like your pic */
+
+    background-color: transparent;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.see-btn:hover {
+    background-color: #6f4e37;
+    color: white;
+}
