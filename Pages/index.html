@@ -1,160 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Fanjalah</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Fanjalah</title>
 
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="blur b1"></div>
+    <div class="blur b2"></div>
 
-<!-- NAVBAR -->
-<header>
-  <nav>
-    <h1>Fanjalah</h1>
-
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="../IT/Allpage.html">Coffee Shops</a></li>
-      <li><a href="#">Favorites</a></li>
-      <li><a href="#">Login</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero container">
-  <h1>Find the Best Cafes in Riyadh</h1>
-  <p>Discover top-rated coffee shops, cozy spots, and hidden gems</p>
-
-  <div class="search-box">
-    <input type="text" placeholder="Search cafes...">
-
-    <select>
-      <option>Location</option>
-      <option>Olaya</option>
-      <option>Malaz</option>
-    </select>
-
-    <select>
-      <option>Rating</option>
-      <option>5 Stars</option>
-      <option>4+ Stars</option>
-    </select>
-
-    <select>
-      <option>Type</option>
-      <option>Study</option>
-      <option>Specialty</option>
-    </select>
-
-    <button>Search</button>
-  </div>
-</section>
-
-<!-- TOP RATED -->
-<section class="section container">
-  <h2>Top Rated Cafes</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb">
-      <div class="card-content">
-        <h3>Overdose Cafe</h3>
-        <p class="rating">⭐ 4.9</p>
-        <p>Riyadh</p>
+    <header class="nav">
+      <div class="brand">
+        <div class="logo">☕</div>
+        <h2>Fanjalah</h2>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb">
-      <div class="card-content">
-        <h3>Half Million</h3>
-        <p class="rating">⭐ 4.8</p>
-        <p>Riyadh</p>
+      <nav>
+        <a href="#">Home</a>
+        <a href="../IT/Allpage.html">All Cafes</a>
+        <a href="./admin.html">Admin</a>
+        <a href="#">Contact</a>
+        <a href="#">About</a>
+      </nav>
+
+      <a href="#" class="nav-btn"> admin login </a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h1>
+          Discover Cafes <br />
+          Built For <br />
+          Students
+        </h1>
+
+        <p>
+          Find quiet spaces, productive vibes and coffee spots made for
+          studying.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#" class="primary"> Browse Cafes </a>
+        </div>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb">
-      <div class="card-content">
-        <h3>Urth Cafe</h3>
-        <p class="rating">⭐ 4.7</p>
-        <p>Riyadh</p>
+      <div class="hero-right">
+        <div class="back-card"></div>
+
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+          />
+        </div>
+
+        <div class="floating one">Fast WiFi</div>
+
+        <div class="floating two">Quiet Study</div>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <section class="section">
+      <h2 class="section-title">Top Rated</h2>
 
-<!-- NEAR YOU -->
-<section class="section container">
-  <h2>Cafes Near You</h2>
+      <div class="carousel-shell">
+        <button class="arrow prev">&#10094;</button>
 
-  <div class="cards">
+        <div class="carousel">
+          <div class="track">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+              />
+              <div class="card-body">
+                <h3>Brew Lab</h3>
+                <p>Minimal study atmosphere</p>
+                <div class="chips">
+                  <span>Outlets</span>
+                  <span>Silent</span>
+                </div>
+              </div>
+            </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb">
-      <div class="card-content">
-        <h3>Cafe Near 1</h3>
-        <p class="rating">⭐ 4.6</p>
-        <p>1.2 km away</p>
+            <div class="card featured">
+              <img
+                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e"
+              />
+              <div class="card-body">
+                <h3>Scholar Cup</h3>
+                <p>Students favorite productivity cafe</p>
+                <div class="chips">
+                  <span>WiFi</span>
+                  <span>Private</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1453614512568-c4024d13c247"
+              />
+              <div class="card-body">
+                <h3>Arabica Hub</h3>
+                <p>Calm mood for long sessions</p>
+                <div class="chips">
+                  <span>Focus</span>
+                  <span>Parking</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1498804103079-a6351b050096"
+              />
+              <div class="card-body">
+                <h3>Night Owl</h3>
+                <p>Late night study</p>
+                <div class="chips">
+                  <span>24/7</span>
+                  <span>Quiet</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="arrow next">&#10095;</button>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb">
-      <div class="card-content">
-        <h3>Cafe Near 2</h3>
-        <p class="rating">⭐ 4.5</p>
-        <p>2.0 km away</p>
+    <section class="section alt">
+      <h2 class="section-title">
+        Near To
+        <span id="swap">You</span>
+      </h2>
+
+      <div class="carousel-shell">
+        <button class="arrow prev">&#10094;</button>
+
+        <div class="carousel">
+          <div class="track">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348"
+              />
+              <div class="card-body">
+                <h3>Campus Brew</h3>
+                <p>Near university study spot</p>
+                <div class="chips">
+                  <span>Quiet</span>
+                  <span>Power</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card featured">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+              />
+              <div class="card-body">
+                <h3>Focus Cup</h3>
+                <p>Perfect after lectures</p>
+                <div class="chips">
+                  <span>WiFi</span>
+                  <span>Silent</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31"
+              />
+              <div class="card-body">
+                <h3>Study Beans</h3>
+                <p>Private productive atmosphere</p>
+                <div class="chips">
+                  <span>Private</span>
+                  <span>Calm</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4"
+              />
+              <div class="card-body">
+                <h3>Library Brew</h3>
+                <p>Best close campus spot</p>
+                <div class="chips">
+                  <span>Study</span>
+                  <span>WiFi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="arrow next">&#10095;</button>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb">
-      <div class="card-content">
-        <h3>Cafe Near 3</h3>
-        <p class="rating">⭐ 4.7</p>
-        <p>0.8 km away</p>
+    <section class="section">
+      <h2 class="section-title">Special</h2>
+
+      <div class="carousel-shell">
+        <button class="arrow prev">&#10094;</button>
+
+        <div class="carousel">
+          <div class="track">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1497636577773-f1231844b336"
+              />
+              <div class="card-body">
+                <h3>Focus Roast</h3>
+                <p>Deep work coffee spot</p>
+                <div class="chips">
+                  <span>Quiet</span>
+                  <span>Outlets</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card featured">
+              <img
+                src="https://images.unsplash.com/photo-1498804103079-a6351b050096"
+              />
+              <div class="card-body">
+                <h3>Hidden Bean</h3>
+                <p>Aesthetic premium study vibe</p>
+                <div class="chips">
+                  <span>Private</span>
+                  <span>Books</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735"
+              />
+              <div class="card-body">
+                <h3>Night Owl</h3>
+                <p>Late night sessions</p>
+                <div class="chips">
+                  <span>24/7</span>
+                  <span>Focus</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e"
+              />
+              <div class="card-body">
+                <h3>Scholar Reserve</h3>
+                <p>Premium hidden place</p>
+                <div class="chips">
+                  <span>Luxury</span>
+                  <span>Private</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="arrow next">&#10095;</button>
       </div>
-    </div>
+    </section>
 
-  </div>
-</section>
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <h3>About</h3>
+          <p>Helping students discover better study cafes in Riyadh.</p>
+        </div>
 
-<!-- REVIEWS -->
-<section class="section container">
-  <h2>Customer Reviews</h2>
+        <div>
+          <h3>Contact</h3>
+          <p>info@fanjalah.com</p>
+          <p>Riyadh Saudi Arabia</p>
+        </div>
 
-  <div class="cards">
+        <div>
+          <h3>Quick Links</h3>
+          <p>Home</p>
+          <p>All Cafes</p>
+          <p>Admin</p>
+        </div>
+      </div>
 
-    <div class="review">
-      <h3>Ahmed</h3>
-      <p class="rating">⭐ 5</p>
-      <p>Amazing place for studying!</p>
-    </div>
-
-    <div class="review">
-      <h3>Faisal</h3>
-      <p class="rating">⭐ 4</p>
-      <p>Great coffee but crowded.</p>
-    </div>
-
-    <div class="review">
-      <h3>Saud</h3>
-      <p class="rating">⭐ 5</p>
-      <p>Best cafe experience.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Fanjalah. All rights reserved.</p>
-</footer>
-
-</body>
+      <div class="footer-bottom">© Fanjalah</div>
+    </footer>
+  </body>
 </html>
