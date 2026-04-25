@@ -1,157 +1,241 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>All Cafe</title>
-        <link rel="stylesheet" href="../IT/Css/s.css">
-        <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    
-    <body>
-        <header class="header">
-    <div class="container">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>All Cafes | Fanjalah</title>
 
-        <!-- Logo -->
-        <div class="logo">
-            <span>☕</span>
-            <h2>Fanjalah</h2>
-        </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- Nav -->
-        <nav>
-            <ul class="nav-links">
-                <li><a href="../Pages/index.html">Home</a></li>
-                <li><a href="Allpage.html" class="active">All Cafes</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="../Pages/admin.html">Admin</a></li>
-                <li><a href="../Pages/contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/category.css" />
+  </head>
+  <body>
+    <div class="blur b1"></div>
+    <div class="blur b2"></div>
 
-        <a href="../Pages/Login.html" class="login-btn">Log In</a>
+    <header class="nav">
+      <div class="brand">
+        <div class="logo">☕</div>
+        <h2>Fanjalah</h2>
+      </div>
 
-    </div>
-</header>
-<div class="page-layout">
-    
+      <nav>
+        <a href="../pages/index.html">Home</a>
+        <a class="admin-link-active" href="Allpage.html">All Cafes</a>
+        <a href="../pages/admin.html">Admin</a>
+        <a href="../pages/index.html#contact">Contact</a>
+        <a href="../pages/index.html#about">About</a>
+      </nav>
 
-    <aside class="filter-sidebar">
-        <h2>Filter By</h2>
+      <a href="../pages/login.html" class="nav-btn"> Login </a>
+    </header>
 
-        <div class="filter-group">
-            <h3>Category</h3>
-            <label><input type="checkbox" value="coffee"> Coffee</label>
-            <label><input type="checkbox" value="Desserts"> Desserts</label>
-            <label><input type="checkbox" value="Brunch"> Brunch</label>
-            <label><input type="checkbox" value="Rooftop"> Rooftop</label>
-            <label><input type="checkbox" value="Study"> Study</label>
-        </div>
+    <section class="allcafes-hero">
+      <h1>Discover Study Cafes In Riyadh</h1>
+
+      <p>Curated cafes for focus, comfort and productivity.</p>
+    </section>
+
+    <section class="page-layout">
+      <aside class="filter-sidebar">
+        <h2>Filters</h2>
 
         <div class="filter-group">
-            <h3>Rating</h3>
-            <label><input type="checkbox" value="5"> 5 Stars</label>
-            <label><input type="checkbox" value="4"> 4 Stars & Up</label>
-            <label><input type="checkbox" value="3"> 3 Stars & Up</label>
-            <label><input type="checkbox" value="2"> 2 Stars & Up</label>
-            <label><input type="checkbox" value="1"> 1 Stars & Up</label>
+          <h3>Category</h3>
+
+          <label><input type="checkbox" /> Coffee</label>
+          <label><input type="checkbox" /> Study</label>
+          <label><input type="checkbox" /> Brunch</label>
+          <label><input type="checkbox" /> Rooftop</label>
         </div>
 
         <div class="filter-group">
-            <h3>District</h3>
-            <label><input type="checkbox"> Al Olaya</label>
-            <label><input type="checkbox"> Al Malqa</label>
-            <label><input type="checkbox"> Al Yasmin</label>
-            <label><input type="checkbox"> Hittin</label>
+          <h3>Rating</h3>
+
+          <label><input type="checkbox" /> 5 Stars</label>
+          <label><input type="checkbox" /> 4+ Stars</label>
         </div>
 
-        <button class="apply-btn">Apply Filter</button>
-    </aside>
+        <div class="filter-group">
+          <h3>District</h3>
 
-    <!-- Main Content -->
-    <main class="cafes-content">
-        <h1>All Cafes</h1>
+          <label><input type="checkbox" /> Olaya</label>
+          <label><input type="checkbox" /> Hittin</label>
+          <label><input type="checkbox" /> Malqa</label>
+        </div>
+
+        <button class="apply-btn">Apply Filters</button>
+      </aside>
+
+      <main class="cafes-content">
+        <h2 class="section-title">All Cafes</h2>
 
         <div class="cafes-grid">
-        <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/MKTH.png" alt="Cafe">
-                <h3>mkth</h3>
-                <p>⭐ 4.6</p>
-                    <a href="Coffee Pages/cafe-mkth.html" class="see-btn">See More</a>
+          <div class="card">
+            <img src="./Coffee Pages/Pics/mkth.png" />
+            <div class="card-body">
+              <h3>MKTH</h3>
+              <p>⭐ 4.6 Study Friendly</p>
+              <div class="chips">
+                <span>WiFi</span>
+                <span>Quiet</span>
+              </div>
+              <a href="./Coffee Pages/cafe-mkth.html" class="see-btn">
+                See More
+              </a>
             </div>
+          </div>
 
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="Coffee Pages/Pics/Peacock.jpg" alt="Cafe">
-                <h3>Peacock</h3>
-                <p>⭐ 4.6</p>
-                    <a href="Coffee Pages/cafe-peacock.html" class="see-btn">See More</a>
+          <div class="card">
+            <img src="./Coffee Pages/Pics/Peacock.jpg" />
+            <div class="card-body">
+              <h3>Peacock</h3>
+              <p>⭐ 4.8 Specialty</p>
+              <div class="chips">
+                <span>Private</span>
+                <span>Outlets</span>
+              </div>
+              <a href="../Coffee Pages/cafe-peacock.html" class="see-btn">
+                See More
+              </a>
             </div>
+          </div>
 
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/IOTA.jpeg" alt="Cafe">
-                <h3>Iota</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-iota.html" class="see-btn">See More</a>
+          <div class="card">
+            <img src="./Coffee Pages/Pics/iota.jpg" />
+            <div class="card-body">
+              <h3>Iota</h3>
+              <p>⭐ 4.5 Minimal</p>
+              <div class="chips">
+                <span>Study</span>
+                <span>Focus</span>
+              </div>
+              <a href="../Coffee Pages/cafe-iota.html" class="see-btn">
+                See More
+              </a>
             </div>
+          </div>
 
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/Kultura.png" alt="Cafe">
-                <h3>Kultura</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-kultura.html" class="see-btn">See More</a>
+          <div class="card">
+            <img src="./Coffee Pages/Pics/kaltura.png" />
+            <div class="card-body">
+              <h3>Kultura</h3>
+              <p>⭐ 4.7 Premium</p>
+              <div class="chips">
+                <span>Calm</span>
+                <span>Private</span>
+              </div>
+              <a href="../Coffee Pages/cafe-kultura.html" class="see-btn">
+                See More
+              </a>
             </div>
+          </div>
 
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/Ashjar.png" alt="Cafe">
-                <h3>Ashjar</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-ashjar.html" class="see-btn">See More</a>
+          <div class="card">
+            <img src="./Coffee Pages/Pics/Ashjar.png" />
+            <div class="card-body">
+              <h3>Ashjar</h3>
+              <p>⭐ 4.7 Aesthetic</p>
+              <div class="chips">
+                <span>Study</span>
+                <span>WiFi</span>
+              </div>
+              <a href="../Coffee Pages/cafe-ashjar.html" class="see-btn">
+                See More
+              </a>
             </div>
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/Eventhu.jpg" alt="Cafe">
-                <h3>Eventhu</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-eventhu.html" class="see-btn">See More</a>
-            </div>
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/Camelstep.png" alt="Cafe">
-                <h3>خطوة جمل</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-camelstep.html" class="see-btn">See More</a>
-            </div>
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/Veni.png" alt="Cafe">
-                <h3>Veni</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-veni.html" class="see-btn">See More</a>
-            </div>
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/Origin.png" alt="Cafe">
-                <h3>Origin</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-origin.html" class="see-btn">See More</a>
-            </div>
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/Bakht.jpg" alt="Cafe">
-                <h3>Bakht</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-bakht.html" class="see-btn">See More</a>
-            </div>
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/peaks.png" alt="Cafe">
-                <h3>Peaks</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-peaks.html" class="see-btn">See More</a>
-            </div>
+          </div>
 
-            <div class="card" data-category="coffee" data-rating="4.5">
-                <img src="../IT/Coffee Pages/Pics/peaks.png" alt="Cafe">
-                <h3>Peaks</h3>
-                <p>⭐ 4.1</p>
-                    <a href="Coffee Pages/cafe-kultura.html" class="see-btn">See More</a>
+          <div class="card">
+            <img src="./Coffee Pages/Pics/Eventhu.jpg" />
+            <div class="card-body">
+              <h3>Eventhu</h3>
+              <p>⭐ 4.5 Cozy</p>
+              <div class="chips">
+                <span>Focus</span>
+                <span>Coffee</span>
+              </div>
+              <a href="../Coffee Pages/cafe-eventhu.html" class="see-btn">
+                See More
+              </a>
             </div>
+          </div>
+
+          <div class="card">
+            <img src="./Coffee Pages/Pics/Camelstep.png" />
+            <div class="card-body">
+              <h3>Camel Step</h3>
+              <p>⭐ 4.8 Specialty</p>
+              <div class="chips">
+                <span>Quiet</span>
+                <span>Power</span>
+              </div>
+              <a href="../Coffee Pages/cafe-camelstep.html" class="see-btn">
+                See More
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./Coffee Pages/Pics/Veni.png" />
+            <div class="card-body">
+              <h3>Veni</h3>
+              <p>⭐ 4.6 Trendy</p>
+              <div class="chips">
+                <span>Study</span>
+                <span>Private</span>
+              </div>
+              <a href="../Coffee Pages/cafe-veni.html" class="see-btn">
+                See More
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./Coffee Pages/Pics/Origin.png" />
+            <div class="card-body">
+              <h3>Origin</h3>
+              <p>⭐ 4.7 Roastery</p>
+              <div class="chips">
+                <span>Focus</span>
+                <span>Quiet</span>
+              </div>
+              <a href="../Coffee Pages/cafe-origin.html" class="see-btn">
+                See More
+              </a>
+            </div>
+          </div>
         </div>
-    </main>
+      </main>
+    </section>
 
-</div>
-    </body>
+    <footer class="site-footer" id="about">
+      <div class="footer-grid">
+        <div>
+          <h3>About</h3>
+          <p>Helping students discover better study cafes in Riyadh.</p>
+        </div>
+
+        <div id="contact">
+          <h3>Contact</h3>
+          <p>info@fanjalah.com</p>
+          <p>Riyadh Saudi Arabia</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <p>Home</p>
+          <p>All Cafes</p>
+          <p>Admin</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© Fanjalah</div>
+    </footer>
+  </body>
 </html>

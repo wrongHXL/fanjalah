@@ -1,113 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login - Fanjalah</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Admin Login | Fanjalah</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4efe6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-        .login-box {
-            background-color: white;
-            width: 350px;
-            padding: 30px;
-            border-radius: 18px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="blur b1"></div>
+    <div class="blur b2"></div>
 
-        .login-box h1 {
-            color: #6f4e37;
-            margin-bottom: 10px;
-        }
+    <header class="nav">
+      <div class="brand">
+        <div class="logo">☕</div>
+        <h2>Fanjalah</h2>
+      </div>
 
-        .login-box p {
-            color: #777;
-            margin-bottom: 25px;
-        }
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../IT/Allpage.html">All Cafes</a>
+        <a href="admin.html">Admin</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="index.html#about">About us</a>
+      </nav>
 
-        .input-group {
-            text-align: left;
-            margin-bottom: 15px;
-        }
+      <a href="Login.html" class="nav-btn"> Login </a>
+    </header>
 
-        .input-group label {
-            display: block;
-            margin-bottom: 6px;
-            color: #4b2e1f;
-            font-weight: bold;
-        }
+    <section class="login-page">
+      <div class="login-left">
+        <h1>Admin Access</h1>
 
-        .input-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #c8b6a6;
-            border-radius: 10px;
-            font-size: 15px;
-            box-sizing: border-box;
-        }
+        <p>Login to manage cafes, reviews and platform data.</p>
 
-        .login-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: #6f4e37;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+        <div class="hero-card login-image">
+          <img
+            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+          />
+        </div>
+      </div>
 
-        .login-btn:hover {
-            background-color: #5a3d2b;
-        }
-
-        .links {
-            margin-top: 18px;
-            font-size: 14px;
-        }
-
-        .links a {
-            color: #6f4e37;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="login-box">
-        <h1>Fanjalah</h1>
-        <p>Log in to your account</p>
+      <div class="login-box-modern">
+        <h2>Welcome Back</h2>
 
         <form>
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email">
-            </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter email" />
+          </div>
 
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password" placeholder="Enter your password">
-            </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter password" />
+          </div>
 
-            <button type="submit" class="login-btn">Log In</button>
+          <button class="login-submit">Login</button>
         </form>
 
-        <div class="links">
-            <p>Don't have an account? <a href="#">Sign up</a></p>
-        </div>
-    </div>
+        <p class="login-note">Admin credentials only</p>
+      </div>
+    </section>
 
-</body>
+    <footer id="about">
+      <div class="footer-grid">
+        <div>
+          <h3>About</h3>
+          <p>Helping students discover better study cafes in Riyadh.</p>
+        </div>
+
+        <div id="contact">
+          <h3>Contact</h3>
+          <p>info@fanjalah.com</p>
+          <p>Riyadh Saudi Arabia</p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <p>Home</p>
+          <p>All Cafes</p>
+          <p>Admin</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">© Fanjalah</div>
+    </footer>
+  </body>
 </html>

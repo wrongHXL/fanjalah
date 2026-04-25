@@ -1,25 +1,267 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Fanjalah</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Fanjalah Admin</title>
 
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<header>
-    <nav>
-        <!-- same links in all pages -->
-    </nav>
-</header>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="blur b1"></div>
+    <div class="blur b2"></div>
 
-<main>
-    <!-- page content -->
-</main>
+    <header class="nav">
+      <div class="brand">
+        <div class="logo">☕</div>
+        <h2>Fanjalah</h2>
+      </div>
 
-<footer>
-    <!-- same footer -->
-</footer>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../IT/Allpage.html">All Cafes</a>
+        <a class="admin-link-active" href="admin.html">Admin</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </nav>
 
-</body>
+      <a href="Login.html" class="nav-btn"> Login </a>
+    </header>
+
+    <div class="admin-dashboard">
+      <aside class="admin-sidebar">
+        <div>
+          <div class="brand">
+            <div class="logo">☕</div>
+            <h2>Dashboard</h2>
+          </div>
+
+          <ul class="admin-menu">
+            <li class="active">Dashboard</li>
+
+            <li>Manage Cafes</li>
+
+            <li>Add Cafe</li>
+
+            <li>Reviews</li>
+
+            <li>Users</li>
+          </ul>
+        </div>
+
+        <a href="Login.html" class="admin-logout"> Logout </a>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <input
+            type="text"
+            placeholder="Search cafes..."
+            class="admin-search"
+          />
+
+          <div class="admin-profile">Admin Panel</div>
+        </header>
+
+        <section class="admin-stats">
+          <div class="admin-card">
+            <h3>120</h3>
+            <p>Total Cafes</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>24</h3>
+            <p>Top Rated</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>8</h3>
+            <p>Pending Reviews</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>2.3k</h3>
+            <p>Users</p>
+          </div>
+        </section>
+
+        <section class="admin-box">
+          <h2>Manage Cafes</h2>
+
+          <table class="admin-table">
+            <tr>
+              <th>Cafe</th>
+              <th>Area</th>
+              <th>Rating</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+
+            <tr>
+              <td>Brew Lab</td>
+              <td>Riyadh</td>
+              <td>4.9</td>
+
+              <td>
+                <span class="status approved"> Approved </span>
+              </td>
+
+              <td>
+                <button class="edit-btn">Edit</button>
+
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Scholar Cup</td>
+              <td>KSU</td>
+              <td>4.8</td>
+
+              <td>
+                <span class="status pending"> Pending </span>
+              </td>
+
+              <td>
+                <button class="edit-btn">Edit</button>
+
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Night Owl</td>
+              <td>North Riyadh</td>
+              <td>4.7</td>
+
+              <td>
+                <span class="status approved"> Approved </span>
+              </td>
+
+              <td>
+                <button class="edit-btn">Edit</button>
+
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </table>
+        </section>
+
+        <section class="admin-box">
+          <h2>Add New Cafe</h2>
+
+          <form class="admin-form">
+            <input placeholder="Cafe Name" />
+
+            <input placeholder="Location" />
+
+            <select>
+              <option>Study Friendly</option>
+
+              <option>Yes</option>
+
+              <option>No</option>
+            </select>
+
+            <input placeholder="WiFi Quality" />
+
+            <input placeholder="Rating" />
+
+            <input type="file" />
+
+            <textarea placeholder="Description"></textarea>
+
+            <button>Add Cafe</button>
+          </form>
+        </section>
+
+        <section class="admin-box">
+          <h2>Featured Cafes</h2>
+
+          <div class="admin-preview-grid">
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+              />
+
+              <div class="card-body">
+                <h3>Brew Lab</h3>
+
+                <p>Popular study cafe</p>
+
+                <div class="chips">
+                  <span>Quiet</span>
+                  <span>WiFi</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e"
+              />
+
+              <div class="card-body">
+                <h3>Scholar Cup</h3>
+
+                <p>Student Favorite</p>
+
+                <div class="chips">
+                  <span>Private</span>
+                  <span>Outlets</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://images.unsplash.com/photo-1498804103079-a6351b050096"
+              />
+
+              <div class="card-body">
+                <h3>Night Owl</h3>
+
+                <p>Late Night Study</p>
+
+                <div class="chips">
+                  <span>24/7</span>
+                  <span>Focus</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer id="about">
+          <div class="footer-grid">
+            <div>
+              <h3>About</h3>
+              <p>Helping students discover better study cafes in Riyadh.</p>
+            </div>
+
+            <div id="contact">
+              <h3>Contact</h3>
+              <p>info@fanjalah.com</p>
+              <p>Riyadh Saudi Arabia</p>
+            </div>
+
+            <div>
+              <h3>Quick Links</h3>
+              <p>Home</p>
+              <p>All Cafes</p>
+              <p>Admin</p>
+            </div>
+          </div>
+
+          <div class="footer-bottom">© Fanjalah</div>
+        </footer>
+      </main>
+    </div>
+  </body>
 </html>
