@@ -1,22 +1,28 @@
-/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f0e6;
-    color: #3e2723;
+    font-family: Poppins, Arial, sans-serif;
+    background: #ebe7dc;
+    color: #2d1c13;
+    overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
 .header {
-    background-color: #fffaf3;
-    border-bottom: 1px solid #ddd;
-    padding: 15px 30px;
+    padding: 18px 8%;
+    background: rgba(235, 231, 220, 0.8);
+    backdrop-filter: blur(14px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .container {
@@ -25,12 +31,11 @@ body {
     align-items: center;
 }
 
-/* ===== LOGO ===== */
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: #3e2723;
+    gap: 14px;
+    color: #2d1c13;
 }
 
 .logo span {
@@ -38,147 +43,206 @@ body {
 }
 
 .logo h2 {
-    font-size: 22px;
+    font-size: 24px;
 }
 
-/* ===== NAV ===== */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 34px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #6d4c41;
-    font-size: 16px;
+    color: #65462c;
+    font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #3e2723;
+    color: #bb9265;
 }
 
-/* ===== CAFE PAGE ===== */
+/* PAGE */
 .cafe-page {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 20px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 30px;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 .cafe-hero {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    background: white;
+    padding: 18px;
+    border-radius: 34px;
+    margin-bottom: 30px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
 .cafe-hero img {
     width: 100%;
-    height: 300px;
+    height: 430px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 24px;
 }
 
-/* ===== INFO ===== */
+/* INFO */
 .cafe-info {
-    background-color: #fffaf3;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    margin-bottom: 20px;
+    background: white;
+    padding: 35px;
+    border-radius: 34px;
+    margin-bottom: 30px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
 .cafe-info h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #3e2723;
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #2d1c13;
 }
 
 .meta {
     display: flex;
-    gap: 15px;
-    margin-bottom: 15px;
-    color: #6d4c41;
-    font-size: 14px;
+    gap: 18px;
+    margin-bottom: 20px;
+    color: #bb9265;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .desc {
-    font-size: 15px;
-    color: #444;
-    line-height: 1.6;
+    font-size: 17px;
+    color: #65462c;
+    line-height: 1.8;
 }
 
-/* ===== REVIEWS ===== */
+/* REVIEWS */
 .reviews {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .reviews h2 {
-    margin-bottom: 15px;
-    color: #3e2723;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .review {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background: white;
+    padding: 25px;
+    border-radius: 26px;
+    margin-bottom: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 .review h4 {
-    margin-bottom: 8px;
-    color: #3e2723;
+    margin-bottom: 10px;
+    color: #2d1c13;
+    font-size: 20px;
 }
 
 .review p {
-    color: #555;
+    color: #65462c;
+    line-height: 1.7;
 }
 
-/* ===== ADD REVIEW ===== */
+/* ADD REVIEW */
 .add-review {
-    background-color: #fffaf3;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    margin-top: 25px;
+    background: white;
+    padding: 35px;
+    border-radius: 34px;
+    margin-top: 35px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
 }
 
 .add-review h2 {
-    margin-bottom: 15px;
-    color: #3e2723;
+    font-size: 36px;
+    margin-bottom: 25px;
 }
 
 .add-review input,
 .add-review select,
 .add-review textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
+    padding: 16px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 18px;
+    background: #f5f2eb;
+    font-size: 15px;
+    outline: none;
+    font-family: Poppins, Arial, sans-serif;
 }
 
 .add-review textarea {
-    height: 100px;
-    resize: vertical;
+    height: 130px;
+    resize: none;
 }
 
 .add-review button {
-    background-color: #6f4e37;
+    background: #2d1c13;
     color: white;
     border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
+    padding: 16px 28px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .add-review button:hover {
-    background-color: #3e2723;
+    background: #bb9265;
+}
+
+/* LOCATION BUTTON IF YOU USE IT */
+.location-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.map-link {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #2d1c13;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    transition: 0.35s;
+}
+
+.map-link:hover {
+    transform: scale(1.08);
+    background: #bb9265;
+}
+
+.location-wrap span {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .nav-links {
+        display: none;
+    }
+
+    .cafe-page {
+        padding: 20px;
+    }
+
+    .cafe-info h1 {
+        font-size: 36px;
+    }
+
+    .cafe-hero img {
+        height: 300px;
+    }
+
+    .meta {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
