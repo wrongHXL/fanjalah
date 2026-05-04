@@ -27,17 +27,16 @@
         <a href="index.html">Home</a>
         <a href="../IT/Allpage.html">All Cafes</a>
         <a href="index.html#contact">Contact</a>
-        <a href="index.html#about">About us</a>
+        <a href="index.html#about">About</a>
       </nav>
 
-      <a href="Login.html" class="nav-btn"> Login </a>
+      <a href="login.html" class="nav-btn"> Login </a>
     </header>
 
     <section class="login-page">
       <div class="login-left">
         <h1>Admin Access</h1>
-
-        <p>Login to manage cafes, reviews and platform data.</p>
+        <p>Login to manage cafes</p>
 
         <div class="hero-card login-image">
           <img
@@ -49,46 +48,43 @@
       <div class="login-box-modern">
         <h2>Welcome Back</h2>
 
-        <form>
+        <form id="loginForm">
           <div class="form-group">
             <label>Email</label>
-            <input type="email" placeholder="Enter email" />
+            <input id="email" type="email" placeholder="Enter email" />
           </div>
 
           <div class="form-group">
             <label>Password</label>
-            <input type="password" placeholder="Enter password" />
+            <input id="password" type="password" placeholder="Enter password" />
           </div>
 
-          <button class="login-submit">Login</button>
+          <button type="submit" class="login-submit">Login</button>
         </form>
-
-        <p class="login-note">Admin credentials only</p>
       </div>
     </section>
 
-    <footer id="about">
-      <div class="footer-grid">
-        <div>
-          <h3>About</h3>
-          <p>Helping students discover better study cafes in Riyadh.</p>
-        </div>
+    <script>
+      const form = document.getElementById("loginForm");
 
-        <div id="contact">
-          <h3>Contact</h3>
-          <p>info@fanjalah.com</p>
-          <p>Riyadh Saudi Arabia</p>
-        </div>
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-        <div>
-          <h3>Quick Links</h3>
-          <p>Home</p>
-          <p>All Cafes</p>
-          <p>Admin</p>
-        </div>
-      </div>
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-      <div class="footer-bottom">© Fanjalah</div>
-    </footer>
+        if (email === "" || password === "") {
+          alert("Fill all fields");
+          return;
+        }
+
+        if (email === "admin@fanjalah.com" && password === "1234") {
+          localStorage.setItem("auth", "true");
+          window.location.href = "./admin.html";
+        } else {
+          alert("Wrong login");
+        }
+      });
+    </script>
   </body>
 </html>
