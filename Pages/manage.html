@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fanjalah Admin</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <div class="blur b1"></div>
+    <div class="blur b2"></div>
+
+    <header class="nav">
+      <div class="brand">
+        <div class="logo">☕</div>
+        <h2>Fanjalah</h2>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="../IT/Allpage.html">All Cafes</a>
+        <a class="admin-link-active" href="admin.html">Admin</a>
+      </nav>
+
+      <a href="Login.html" class="nav-btn">Login</a>
+    </header>
+
+    <div class="admin-dashboard">
+
+      <!-- SIDEBAR -->
+
+      <aside class="admin-sidebar">
+        <div>
+
+          <div class="brand">
+            <div class="logo">☕</div>
+            <h2>Dashboard</h2>
+          </div>
+
+          <ul class="admin-menu">
+
+            <li class="active">
+              <a href="#dashboard">Dashboard</a>
+            </li>
+
+            <li>
+              <a href="#manage-cafes">Manage Cafes</a>
+            </li>
+
+            <li>
+              <a href="#add-cafe">Add Cafe</a>
+            </li>
+
+            <li>
+              <a href="#reviews">Reviews</a>
+            </li>
+
+            <li>
+              <a href="#users">Users</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <a href="Login.html" class="admin-logout">
+          Logout
+        </a>
+
+      </aside>
+
+      <!-- MAIN -->
+
+      <main class="admin-main">
+
+        <!-- TOPBAR -->
+
+        <header class="admin-topbar">
+
+          <input
+            type="text"
+            placeholder="Search cafes..."
+            class="admin-search"
+          />
+
+          <div class="admin-profile">
+            Admin Panel
+          </div>
+
+        </header>
+
+        <!-- DASHBOARD -->
+
+        <section id="dashboard" class="admin-stats">
+
+          <div class="admin-card">
+            <h3>120</h3>
+            <p>Total Cafes</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>24</h3>
+            <p>Top Rated</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>8</h3>
+            <p>Pending Reviews</p>
+          </div>
+
+          <div class="admin-card">
+            <h3>2.3k</h3>
+            <p>Users</p>
+          </div>
+
+        </section>
+
+        <!-- MANAGE CAFES -->
+
+        <section id="manage-cafes" class="admin-box">
+
+          <h2>Manage Cafes</h2>
+
+          <table class="admin-table">
+
+            <tr>
+              <th>Cafe</th>
+              <th>Area</th>
+              <th>Rating</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+
+            <tr>
+              <td>Brew Lab</td>
+              <td>Riyadh</td>
+              <td>4.9</td>
+
+              <td>
+                <span class="status approved">
+                  Approved
+                </span>
+              </td>
+
+              <td>
+                <button class="edit-btn">Edit</button>
+
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Scholar Cup</td>
+              <td>KSU</td>
+              <td>4.8</td>
+
+              <td>
+                <span class="status pending">
+                  Pending
+                </span>
+              </td>
+
+              <td>
+                <button class="edit-btn">Edit</button>
+
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+
+          </table>
+
+        </section>
+
+        <!-- ADD CAFE -->
+
+        <section id="add-cafe" class="admin-box">
+
+          <h2>Add New Cafe</h2>
+
+          <form class="admin-form">
+
+            <input placeholder="Cafe Name">
+
+            <input placeholder="Location">
+
+            <select>
+              <option>Study Friendly</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+
+            <input placeholder="WiFi Quality">
+
+            <input placeholder="Rating">
+
+            <input type="file">
+
+            <textarea placeholder="Description"></textarea>
+
+            <button type="submit">
+              Add Cafe
+            </button>
+
+          </form>
+
+        </section>
+
+        <!-- REVIEWS -->
+
+        <section id="reviews" class="admin-box">
+
+          <h2>Reviews</h2>
+
+          <p>No reviews yet.</p>
+
+        </section>
+
+        <!-- USERS -->
+
+        <section id="users" class="admin-box">
+
+          <h2>Users</h2>
+
+          <p>No users yet.</p>
+
+        </section>
+
+      </main>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+      function addActions(row) {
+
+        row.querySelector(".delete-btn").onclick = function () {
+          row.remove();
+        };
+
+        row.querySelector(".edit-btn").onclick = function () {
+
+          row.children[0].textContent =
+            prompt("Cafe name:", row.children[0].textContent)
+            || row.children[0].textContent;
+
+          row.children[1].textContent =
+            prompt("Area:", row.children[1].textContent)
+            || row.children[1].textContent;
+
+          row.children[2].textContent =
+            prompt("Rating:", row.children[2].textContent)
+            || row.children[2].textContent;
+
+        };
+
+      }
+
+      document.querySelectorAll(".admin-table tr")
+      .forEach(function (row, index) {
+
+        if (index > 0) {
+          addActions(row);
+        }
+
+      });
+
+      document.querySelector(".admin-form").onsubmit = function (e) {
+
+        e.preventDefault();
+
+        let inputs = this.querySelectorAll("input");
+
+        if (
+          inputs[0].value.trim() === "" ||
+          inputs[1].value.trim() === "" ||
+          inputs[4].value.trim() === ""
+        ) {
+
+          alert("Fill required fields");
+          return;
+
+        }
+
+        let row = document.createElement("tr");
+
+        row.innerHTML = `
+          <td>${inputs[0].value}</td>
+          <td>${inputs[1].value}</td>
+          <td>${inputs[4].value}</td>
+
+          <td>
+            <span class="status pending">
+              Pending
+            </span>
+          </td>
+
+          <td>
+            <button class="edit-btn">Edit</button>
+
+            <button class="delete-btn">Delete</button>
+          </td>
+        `;
+
+        document.querySelector(".admin-table").appendChild(row);
+
+        addActions(row);
+
+        this.reset();
+
+      };
+
+    </script>
+
+  </body>
+</html>

@@ -857,13 +857,3 @@ html {
   font-weight: 500;
   font-size: 15px;
 }
-.admin-menu a {
-  color: white;
-  text-decoration: none;
-  display: block;
-}
-
-.admin-box,
-.admin-stats {
-  scroll-margin-top: 110px;
-}
