@@ -1,8 +1,6 @@
 <?php
 session_start();
 include 'cafes.php';
-
-// Ensure $cafes is defined to avoid undefined variable errors if include fails
 if (!isset($cafes) || !is_array($cafes)) {
   $cafes = [];
 }
@@ -72,36 +70,78 @@ $filteredCafes = array_filter($cafes, function($cafe) use ($selectedCategories, 
       <p>Curated cafes for focus, comfort and productivity.</p>
     </section>
 
-    <section class="page-layout">
-      <aside class="filter-sidebar">
-        <h2>Filters</h2>
+    <form class="filter-sidebar" method="GET">
 
-        <div class="filter-group">
-          <h3>Category</h3>
+  <h2>Filters</h2>
 
-          <label><input type="checkbox" /> Coffee</label>
-          <label><input type="checkbox" /> Study</label>
-          <label><input type="checkbox" /> Brunch</label>
-          <label><input type="checkbox" /> Rooftop</label>
-        </div>
+  <div class="filter-group">
 
-        <div class="filter-group">
-          <h3>Rating</h3>
+    <h3>Category</h3>
 
-          <label><input type="checkbox" /> 5 Stars</label>
-          <label><input type="checkbox" /> 4+ Stars</label>
-        </div>
+    <label>
+      <input type="checkbox" name="category[]" value="Coffee">
+      Coffee
+    </label>
 
-        <div class="filter-group">
-          <h3>District</h3>
+    <label>
+      <input type="checkbox" name="category[]" value="Study">
+      Study
+    </label>
 
-          <label><input type="checkbox" /> Olaya</label>
-          <label><input type="checkbox" /> Hittin</label>
-          <label><input type="checkbox" /> Malqa</label>
-        </div>
+    <label>
+      <input type="checkbox" name="category[]" value="Brunch">
+      Brunch
+    </label>
 
-        <button class="apply-btn">Apply Filters</button>
-      </aside>
+    <label>
+      <input type="checkbox" name="category[]" value="Rooftop">
+      Rooftop
+    </label>
+
+  </div>
+
+  <div class="filter-group">
+
+    <h3>Rating</h3>
+
+    <label>
+      <input type="radio" name="rating" value="5">
+      5 Stars
+    </label>
+
+    <label>
+      <input type="radio" name="rating" value="4">
+      4+ Stars
+    </label>
+
+  </div>
+
+  <div class="filter-group">
+
+    <h3>District</h3>
+
+    <label>
+      <input type="checkbox" name="district[]" value="Olaya">
+      Olaya
+    </label>
+
+    <label>
+      <input type="checkbox" name="district[]" value="Hittin">
+      Hittin
+    </label>
+
+    <label>
+      <input type="checkbox" name="district[]" value="Malqa">
+      Malqa
+    </label>
+
+  </div>
+
+  <button class="apply-btn" type="submit">
+    Apply Filters
+  </button>
+
+</form>
 
       <main class="cafes-content">
         <h2 class="section-title">All Cafes</h2>
