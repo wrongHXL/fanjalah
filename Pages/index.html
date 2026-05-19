@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Fanjalah</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="../css/style.css" />
   </head>
+
   <body>
     <div class="blur b1"></div>
     <div class="blur b2"></div>
@@ -19,25 +23,39 @@
     <header class="nav">
       <div class="brand">
         <div class="logo">☕</div>
+
         <h2>Fanjalah</h2>
       </div>
 
       <nav>
-        <a href="#">Home</a>
-        <a href="../IT/Allpage.html">All Cafes</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About us</a>
+        <a href="index.php"> Home </a>
+
+        <a href="../IT/Allpage.php"> All Cafes </a>
+
+        <a href="login.php"> Admin </a>
+
+        <a href="#contact"> Contact </a>
+
+        <a href="#about"> About </a>
       </nav>
 
-      <a href="./Login.html" class="nav-btn"> login </a>
+      <a href="login.php" class="nav-btn"> Login </a>
     </header>
 
-    <section class="hero">
+    <!-- =========================
+HERO
+========================= -->
+
+    <section class="hero reveal">
       <div class="hero-left">
         <h1>
-          Discover Cafes <br />
-          Built For <br />
-          Students
+          Discover Cafes
+          <br />
+
+          Built For
+          <br />
+
+          <span class="highlight"> Students </span>
         </h1>
 
         <p>
@@ -46,7 +64,7 @@
         </p>
 
         <div class="hero-actions">
-          <a href="../IT/Allpage.html" class="primary"> Browse Cafes </a>
+          <a href="../IT/Allpage.php" class="primary"> Browse Cafes </a>
         </div>
       </div>
 
@@ -65,7 +83,11 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- =========================
+TOP RATED
+========================= -->
+
+    <section class="section reveal">
       <h2 class="section-title">Top Rated</h2>
 
       <div class="carousel-shell">
@@ -73,59 +95,55 @@
 
         <div class="carousel">
           <div class="track">
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
-              />
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-peacock.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Peacock.jpg" />
+
               <div class="card-body">
-                <h3>Brew Lab</h3>
-                <p>Minimal study atmosphere</p>
-                <div class="chips">
-                  <span>Outlets</span>
-                  <span>Silent</span>
-                </div>
+                <h3>Peacock</h3>
+
+                <p>⭐ 4.8 Specialty</p>
               </div>
             </div>
 
-            <div class="card featured">
-              <img
-                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e"
-              />
+            <div
+              class="card featured"
+              onclick="go('../IT/Coffee Pages/cafe-camelstep.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Camelstep.png" />
+
               <div class="card-body">
-                <h3>Scholar Cup</h3>
-                <p>Students favorite productivity cafe</p>
-                <div class="chips">
-                  <span>WiFi</span>
-                  <span>Private</span>
-                </div>
+                <h3>Camel Step</h3>
+
+                <p>⭐ 4.8 Specialty</p>
               </div>
             </div>
 
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1453614512568-c4024d13c247"
-              />
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-kultura.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/kaltura.png" />
+
               <div class="card-body">
-                <h3>Arabica Hub</h3>
-                <p>Calm mood for long sessions</p>
-                <div class="chips">
-                  <span>Focus</span>
-                  <span>Parking</span>
-                </div>
+                <h3>Kultura</h3>
+
+                <p>⭐ 4.7 Premium</p>
               </div>
             </div>
 
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1498804103079-a6351b050096"
-              />
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-origin.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Origin.png" />
+
               <div class="card-body">
-                <h3>Night Owl</h3>
-                <p>Late night study</p>
-                <div class="chips">
-                  <span>24/7</span>
-                  <span>Quiet</span>
-                </div>
+                <h3>Origin</h3>
+
+                <p>⭐ 4.7 Roastery</p>
               </div>
             </div>
           </div>
@@ -135,70 +153,61 @@
       </div>
     </section>
 
-    <section class="section alt">
-      <h2 class="section-title">
-        Near To
-        <span id="swap">You</span>
-      </h2>
+    <!-- =========================
+NEAR KSU
+========================= -->
+
+    <section class="section alt reveal">
+      <h2 class="section-title">Near KSU</h2>
 
       <div class="carousel-shell">
         <button class="arrow prev">&#10094;</button>
 
         <div class="carousel">
           <div class="track">
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1511920170033-f8396924c348"
-              />
+            <div class="card" onclick="go('../IT/Coffee Pages/cafe-mkth.php')">
+              <img src="../IT/Coffee Pages/Pics/mkth.png" />
+
               <div class="card-body">
-                <h3>Campus Brew</h3>
-                <p>Near university study spot</p>
-                <div class="chips">
-                  <span>Quiet</span>
-                  <span>Power</span>
-                </div>
+                <h3>MKTH</h3>
+
+                <p>⭐ 4.6 Study Friendly</p>
               </div>
             </div>
 
-            <div class="card featured">
-              <img
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
-              />
+            <div
+              class="card featured"
+              onclick="go('../IT/Coffee Pages/cafe-iota.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/iota.jpg" />
+
               <div class="card-body">
-                <h3>Focus Cup</h3>
-                <p>Perfect after lectures</p>
-                <div class="chips">
-                  <span>WiFi</span>
-                  <span>Silent</span>
-                </div>
+                <h3>Iota</h3>
+
+                <p>⭐ 4.5 Minimal</p>
               </div>
             </div>
 
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1442512595331-e89e73853f31"
-              />
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-eventhu.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Eventhu.jpg" />
+
               <div class="card-body">
-                <h3>Study Beans</h3>
-                <p>Private productive atmosphere</p>
-                <div class="chips">
-                  <span>Private</span>
-                  <span>Calm</span>
-                </div>
+                <h3>Eventhu</h3>
+
+                <p>⭐ 4.5 Cozy</p>
               </div>
             </div>
 
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4"
-              />
+            <div class="card" onclick="go('../IT/Coffee Pages/cafe-veni.php')">
+              <img src="../IT/Coffee Pages/Pics/Veni.png" />
+
               <div class="card-body">
-                <h3>Library Brew</h3>
-                <p>Best close campus spot</p>
-                <div class="chips">
-                  <span>Study</span>
-                  <span>WiFi</span>
-                </div>
+                <h3>Veni</h3>
+
+                <p>⭐ 4.6 Trendy</p>
               </div>
             </div>
           </div>
@@ -208,7 +217,81 @@
       </div>
     </section>
 
-    <section class="section">
+    <!-- =========================
+NEAR IMAMU
+========================= -->
+
+    <section class="section reveal">
+      <h2 class="section-title">Near Imamu</h2>
+
+      <div class="carousel-shell">
+        <button class="arrow prev">&#10094;</button>
+
+        <div class="carousel">
+          <div class="track">
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-ashjar.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Ashjar.png" />
+
+              <div class="card-body">
+                <h3>Ashjar</h3>
+
+                <p>⭐ 4.7 Aesthetic</p>
+              </div>
+            </div>
+
+            <div
+              class="card featured"
+              onclick="go('../IT/Coffee Pages/cafe-origin.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Origin.png" />
+
+              <div class="card-body">
+                <h3>Origin</h3>
+
+                <p>⭐ 4.7 Roastery</p>
+              </div>
+            </div>
+
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-camelstep.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Camelstep.png" />
+
+              <div class="card-body">
+                <h3>Camel Step</h3>
+
+                <p>⭐ 4.8 Specialty</p>
+              </div>
+            </div>
+
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-peacock.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Peacock.jpg" />
+
+              <div class="card-body">
+                <h3>Peacock</h3>
+
+                <p>⭐ 4.8 Specialty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="arrow next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- =========================
+SPECIAL
+========================= -->
+
+    <section class="section alt reveal">
       <h2 class="section-title">Special</h2>
 
       <div class="carousel-shell">
@@ -216,59 +299,55 @@
 
         <div class="carousel">
           <div class="track">
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1497636577773-f1231844b336"
-              />
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-kultura.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/kaltura.png" />
+
               <div class="card-body">
-                <h3>Focus Roast</h3>
-                <p>Deep work coffee spot</p>
-                <div class="chips">
-                  <span>Quiet</span>
-                  <span>Outlets</span>
-                </div>
+                <h3>Kultura</h3>
+
+                <p>⭐ 4.7 Premium</p>
               </div>
             </div>
 
-            <div class="card featured">
-              <img
-                src="https://images.unsplash.com/photo-1498804103079-a6351b050096"
-              />
+            <div
+              class="card featured"
+              onclick="go('../IT/Coffee Pages/cafe-camelstep.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Camelstep.png" />
+
               <div class="card-body">
-                <h3>Hidden Bean</h3>
-                <p>Aesthetic premium study vibe</p>
-                <div class="chips">
-                  <span>Private</span>
-                  <span>Books</span>
-                </div>
+                <h3>Camel Step</h3>
+
+                <p>⭐ 4.8 Specialty</p>
               </div>
             </div>
 
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735"
-              />
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-peacock.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Peacock.jpg" />
+
               <div class="card-body">
-                <h3>Night Owl</h3>
-                <p>Late night sessions</p>
-                <div class="chips">
-                  <span>24/7</span>
-                  <span>Focus</span>
-                </div>
+                <h3>Peacock</h3>
+
+                <p>⭐ 4.8 Specialty</p>
               </div>
             </div>
 
-            <div class="card">
-              <img
-                src="https://images.unsplash.com/photo-1447933601403-0c6688de566e"
-              />
+            <div
+              class="card"
+              onclick="go('../IT/Coffee Pages/cafe-origin.php')"
+            >
+              <img src="../IT/Coffee Pages/Pics/Origin.png" />
+
               <div class="card-body">
-                <h3>Scholar Reserve</h3>
-                <p>Premium hidden place</p>
-                <div class="chips">
-                  <span>Luxury</span>
-                  <span>Private</span>
-                </div>
+                <h3>Origin</h3>
+
+                <p>⭐ 4.7 Roastery</p>
               </div>
             </div>
           </div>
@@ -282,24 +361,186 @@
       <div class="footer-grid">
         <div>
           <h3>About</h3>
+
           <p>Helping students discover better study cafes in Riyadh.</p>
         </div>
 
         <div id="contact">
           <h3>Contact</h3>
+
           <p>info@fanjalah.com</p>
+
           <p>Riyadh Saudi Arabia</p>
         </div>
 
         <div>
           <h3>Quick Links</h3>
+
           <p>Home</p>
+
           <p>All Cafes</p>
+
           <p>Admin</p>
         </div>
       </div>
 
       <div class="footer-bottom">© Fanjalah</div>
     </footer>
+
+    <script>
+      function go(link) {
+        window.location.href = link;
+      }
+
+      /* =========================
+REVEAL
+========================= */
+
+      const reveals = document.querySelectorAll(".reveal");
+
+      function revealSections() {
+        reveals.forEach((section) => {
+          const top = section.getBoundingClientRect().top;
+
+          if (top < window.innerHeight - 120) {
+            section.classList.add("show-section");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealSections);
+
+      revealSections();
+
+      /* =========================
+PERFECT CAROUSEL
+========================= */
+
+      document.querySelectorAll(".carousel-shell").forEach((shell) => {
+        const track = shell.querySelector(".track");
+
+        const nextBtn = shell.querySelector(".next");
+
+        const prevBtn = shell.querySelector(".prev");
+
+        let cards = Array.from(track.children);
+
+        const originalLength = cards.length;
+
+        const cardWidth = 355;
+
+        let index = 1;
+
+        let isAnimating = false;
+
+        const firstClone = cards[0].cloneNode(true);
+
+        const lastClone = cards[cards.length - 1].cloneNode(true);
+
+        track.appendChild(firstClone);
+
+        track.insertBefore(lastClone, track.firstChild);
+
+        cards = Array.from(track.children);
+
+        track.style.transform = `translateX(-${cardWidth * index}px)`;
+
+        /* ===== FEATURED ===== */
+
+        function updateFeatured() {
+          cards.forEach((card) => {
+            card.classList.remove("featured");
+          });
+
+          cards[index].classList.add("featured");
+        }
+
+        updateFeatured();
+
+        /* ===== UPDATE ===== */
+
+        function updateCarousel(smooth = true) {
+          track.style.transition = smooth
+            ? "transform .8s cubic-bezier(.22,.61,.36,1)"
+            : "none";
+
+          track.style.transform = `translateX(-${cardWidth * index}px)`;
+
+          updateFeatured();
+        }
+
+        /* ===== NEXT ===== */
+
+        function nextSlide() {
+          if (isAnimating) return;
+
+          isAnimating = true;
+
+          index++;
+
+          updateCarousel(true);
+        }
+
+        /* ===== PREV ===== */
+
+        function prevSlide() {
+          if (isAnimating) return;
+
+          isAnimating = true;
+
+          index--;
+
+          updateCarousel(true);
+        }
+
+        /* ===== BUTTONS ===== */
+
+        nextBtn.addEventListener("click", nextSlide);
+
+        prevBtn.addEventListener("click", prevSlide);
+
+        /* ===== LOOP FIX ===== */
+
+        track.addEventListener("transitionend", () => {
+          if (index === cards.length - 1) {
+            track.style.transition = "none";
+
+            index = 1;
+
+            track.style.transform = `translateX(-${cardWidth * index}px)`;
+          }
+
+          if (index === 0) {
+            track.style.transition = "none";
+
+            index = originalLength;
+
+            track.style.transform = `translateX(-${cardWidth * index}px)`;
+          }
+
+          updateFeatured();
+
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              isAnimating = false;
+            });
+          });
+        });
+
+        /* ===== AUTOPLAY ===== */
+
+        let autoPlay = setInterval(nextSlide, 4000);
+
+        /* ===== PAUSE ===== */
+
+        shell.addEventListener("mouseenter", () => {
+          clearInterval(autoPlay);
+        });
+
+        shell.addEventListener("mouseleave", () => {
+          autoPlay = setInterval(nextSlide, 4000);
+        });
+      });
+    </script>
   </body>
 </html>
