@@ -1,7 +1,34 @@
 <?php
 session_start();
-
 include 'cafes.php';
+
+// Ensure $cafes is defined to avoid undefined variable errors if include fails
+if (!isset($cafes) || !is_array($cafes)) {
+  $cafes = [];
+}
+
+$selectedCategories = $_GET['category'] ?? [];
+$selectedRating = $_GET['rating'] ?? "";
+$selectedDistricts = $_GET['district'] ?? [];
+
+$filteredCafes = array_filter($cafes, function($cafe) use ($selectedCategories, $selectedRating, $selectedDistricts) {
+
+  $categoryMatch = empty($selectedCategories) || in_array($cafe['category'], $selectedCategories);
+
+  $ratingMatch = true;
+
+  if ($selectedRating == "5") {
+    $ratingMatch = $cafe['rating'] == 5;
+  }
+
+  if ($selectedRating == "4") {
+    $ratingMatch = $cafe['rating'] >= 4;
+  }
+
+  $districtMatch = empty($selectedDistricts) || in_array($cafe['district'], $selectedDistricts);
+
+  return $categoryMatch && $ratingMatch && $districtMatch;
+});
 ?>
 <!DOCTYPE html>
 <html lang="en">
