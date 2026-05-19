@@ -1,33 +1,37 @@
 <?php
 session_start();
 
-include 'db.php';
+require_once __DIR__ . "/../IT/db.php";
+if (!isset($conn)) {
+  die("ERROR: db.php loaded, but \$conn was not created.");
+}
+
+if (!$conn) {
+  die("ERROR: Database connection failed.");
+}
 
 if (!isset($_SESSION["user_id"])) {
-
   header("Location: ../Pages/login.php");
-
   exit();
 }
 
 if ($_SESSION["role"] != "admin") {
-
   die("Access Denied. Admins only.");
-
 }
 
-$totalUsersQuery = mysqli_query(
-  $conn,
-  "SELECT COUNT(*) AS total FROM users"
-);
+$totalUsersQuery = mysqli_query($conn, "SELECT COUNT(*) AS total FROM users");
 
-$totalUsers =
-  mysqli_fetch_assoc($totalUsersQuery)["total"];
+if (!$totalUsersQuery) {
+  die("SQL Error: " . mysqli_error($conn));
+}
 
-$usersQuery = mysqli_query(
-  $conn,
-  "SELECT * FROM users ORDER BY id DESC"
-);
+$totalUsers = mysqli_fetch_assoc($totalUsersQuery)["total"];
+
+$usersQuery = mysqli_query($conn, "SELECT * FROM users ORDER BY id DESC");
+
+if (!$usersQuery) {
+  die("SQL Error: " . mysqli_error($conn));
+}
 ?>
 
 <!DOCTYPE html>

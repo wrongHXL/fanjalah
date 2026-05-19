@@ -1,10 +1,9 @@
 <?php
 session_start();
 
-$conn = null;
 require_once __DIR__ . '/../IT/db.php';
 
-if (!$conn) {
+if (!isset($conn) || !$conn) {
   die("Database connection failed");
 }
 
@@ -115,9 +114,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   </nav>
 
-  <a href="login.php" class="nav-btn">
-    Login
-  </a>
+  <?php if(isset($_SESSION["user_id"])): ?>
+
+    <a href="logout.php" class="nav-btn">
+      Logout
+    </a>
+
+  <?php else: ?>
+
+    <a href="login.php" class="nav-btn">
+      Login
+    </a>
+
+  <?php endif; ?>
 
 </header>
 

@@ -3,6 +3,10 @@ session_start();
 
 require_once __DIR__ . '/../IT/db.php';
 
+if (!isset($conn) || !$conn) {
+  die("Database connection failed");
+}
+
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -138,9 +142,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   </nav>
 
-  <a href="login.php" class="nav-btn">
-    Login
-  </a>
+  <?php if(isset($_SESSION["user_id"])): ?>
+
+    <a href="logout.php" class="nav-btn">
+      Logout
+    </a>
+
+  <?php else: ?>
+
+    <a href="login.php" class="nav-btn">
+      Login
+    </a>
+
+  <?php endif; ?>
 
 </header>
 
@@ -254,10 +268,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </form>
 
-    <div style="margin-top:20px;">
+    <div style="margin-top:20px; text-align:center;">
+
+      <p>
+        Already have an account?
+      </p>
 
       <a href="login.php">
-        Already have an account?
+        Login
       </a>
 
     </div>
