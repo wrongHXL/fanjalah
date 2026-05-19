@@ -1,10 +1,11 @@
 <?php
 session_start();
 
+$conn = null;
 require_once __DIR__ . '/../IT/db.php';
 
-if (!isset($conn)) {
-  die('Database connection not configured.');
+if (!$conn) {
+  die("Database connection failed");
 }
 
 $error = "";
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($user["role"] == "admin") {
 
-      header("Location: ../IT/admin.php");
+      header("Location: admin.php");
 
     } else {
 
@@ -81,118 +82,122 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
-  <div class="blur b1"></div>
-  <div class="blur b2"></div>
+<div class="blur b1"></div>
+<div class="blur b2"></div>
 
-  <header class="nav">
+<header class="nav">
 
-    <div class="brand">
+  <div class="brand">
 
-      <div class="logo">☕</div>
+    <div class="logo">☕</div>
 
-      <h2>Fanjalah</h2>
+    <h2>Fanjalah</h2>
+
+  </div>
+
+  <nav>
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="../IT/Allpage.php">
+      All Cafes
+    </a>
+
+    <a href="index.html#contact">
+      Contact
+    </a>
+
+    <a href="index.html#about">
+      About
+    </a>
+
+  </nav>
+
+  <a href="login.php" class="nav-btn">
+    Login
+  </a>
+
+</header>
+
+<section class="login-page">
+
+  <div class="login-left">
+
+    <h1>Welcome Back</h1>
+
+    <p>
+      Login to continue using Fanjalah
+    </p>
+
+    <div class="hero-card login-image">
+
+      <img
+        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+      />
 
     </div>
 
-    <nav>
+  </div>
 
-      <a href="index.html">
-        Home
-      </a>
+  <div class="login-box-modern">
 
-      <a href="../IT/Allpage.php">
-        All Cafes
-      </a>
+    <h2>Login</h2>
 
-      <a href="index.html#contact">
-        Contact
-      </a>
+    <form method="POST">
 
-      <a href="index.html#about">
-        About
-      </a>
+      <div class="form-group">
 
-    </nav>
+        <label>Email</label>
 
-    <a href="login.php" class="nav-btn">
-      Login
-    </a>
-
-  </header>
-
-  <section class="login-page">
-
-    <div class="login-left">
-
-      <h1>Welcome Back</h1>
-
-      <p>
-        Login to continue using Fanjalah
-      </p>
-
-      <div class="hero-card login-image">
-
-        <img
-          src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
+        <input
+          name="email"
+          type="email"
+          placeholder="Enter email"
+          required
         />
 
       </div>
 
-    </div>
+      <div class="form-group">
 
-    <div class="login-box-modern">
+        <label>Password</label>
 
-      <h2>Login</h2>
-
-      <form method="POST">
-
-        <div class="form-group">
-
-          <label>Email</label>
-
-          <input
-            name="email"
-            type="email"
-            placeholder="Enter email"
-            required
-          />
-
-        </div>
-
-        <div class="form-group">
-
-          <label>Password</label>
-
-          <input
-            name="password"
-            type="password"
-            placeholder="Enter password"
-            required
-          />
-
-        </div>
-
-        <button type="submit" class="login-submit">
-          Login
-        </button>
-
-        <p style="color:red; margin-top:10px;">
-          <?= $error ?>
-        </p>
-
-      </form>
-
-      <div style="margin-top:20px;">
-
-        <a href="../IT/register.php">
-          Create Account
-        </a>
+        <input
+          name="password"
+          type="password"
+          placeholder="Enter password"
+          required
+        />
 
       </div>
 
+      <button type="submit" class="login-submit">
+        Login
+      </button>
+
+      <p style="color:red; margin-top:10px;">
+        <?= $error ?>
+      </p>
+
+    </form>
+
+    <div style="margin-top:20px; text-align:center;">
+
+      <p>
+        Don't have an account?
+      </p>
+
+      <a href="register.php">
+        Create Account
+      </a>
+
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 </body>
 </html>
