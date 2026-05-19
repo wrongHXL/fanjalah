@@ -1,7 +1,11 @@
 <?php
 session_start();
 
-include '../IT/db.php';
+require_once __DIR__ . '/../IT/db.php';
+
+if (!isset($conn)) {
+  die('Database connection not configured.');
+}
 
 $error = "";
 
