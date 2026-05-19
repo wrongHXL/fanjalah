@@ -94,9 +94,19 @@ $filteredCafes = array_filter($cafes, function($cafe) use ($selectedCategories, 
 
     </nav>
 
-    <a href="../pages/login.php" class="nav-btn">
-      Login
-    </a>
+    <?php if(isset($_SESSION["user_id"])): ?>
+
+  <a href="../Pages/logout.php" class="nav-btn">
+    Logout
+  </a>
+
+<?php else: ?>
+
+  <a href="../Pages/login.php" class="nav-btn">
+    Login
+  </a>
+
+<?php endif; ?>
 
   </header>
 
